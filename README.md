@@ -1,7 +1,7 @@
 Hi I'm @Fudgerinoo
 I love all things IT, and have been practicing network and systems engineering in linux
 
-** Automated BGP Provisioning & Router-on-a-Stick Lab**
+Automated BGP Provisioning & Router-on-a-Stick Lab
 
 # Overview
 This project simulates a modern 5G Telco infrastructure (CU/DU/RU nodes) using a Type-1 hypervisor architecture. It includes a custom Python automation tool designed to dynamically fetch, modify, and push BGP configurations to a centralized REST API controller.
