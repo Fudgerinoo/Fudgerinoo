@@ -20,7 +20,7 @@ The included Python script intercepts BGP configuration payloads, modifies opera
 
 **To run the provisioning script:**
 `python3 bgp_provision.py --gurl https://httpbin.org/post --peer 192.168.122.105 --status up`
-args = --gurl, --purl, --peer, --status, 
+>args = --gurl, --purl, --peer, --status, 
 
 <!---
 Fudgerinoo/Fudgerinoo is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
