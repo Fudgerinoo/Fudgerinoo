@@ -9,7 +9,7 @@ def main():
     parser.add_argument('--gurl', required=True, help="Destination API get url")
     parser.add_argument('--peer', required=True, help="IP of the BGP neighbor")
     parser.add_argument('--status', choices=['up','down'], default='down', \
-                    required=True, help="The desired administrative state ")
+                    required=False, help="The desired administrative state ")
     #In an actual radio env, url/ip would be the same potentially, as you'd pull/push to the same
     # added additional arg just for ability to test myself as i have no radios :(
     parser.add_argument('--purl', required=False, default='https://httpbin.org/post', \
@@ -27,8 +27,8 @@ def main():
 
         print("[*] Applying local modifications")
 
-        current_config['headers']['bgp_target_peer'] = (f'{args.peer}')
-        current_config['headers']['bgp_target_status'] = (f'{args.status}')
+        current_config['headers']['bgp_target_peer'] = args.peer
+        current_config['headers']['bgp_target_status'] = args.status
 
         print(f"[*] Pushing updated configuration to {args.purl}...")
 
